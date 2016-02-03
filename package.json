@@ -1,24 +1,37 @@
 {
-  "name": "murmur",
-  "version": "1.0.0",
-  "description": "foOfys desktop chat",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/resaca/murmur.git"
-  },
-  "keywords": [
-    "chat",
-    "murmur",
-    "text"
-  ],
-  "author": "Sebin Thomas",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/resaca/murmur/issues"
-  },
-  "homepage": "https://github.com/resaca/murmur#readme"
+    "name": "murmur",
+    "version": "0.0.1",
+    "main": "./app/index.html",
+    "description": "foOfys desktop chat",
+    "repository": "git@github.com:resaca/murmur.git",
+    "license": "MIT",
+    "node-remote": "localhost",
+    "scripts": {
+        "start": "nw"
+    },
+    "dependencies": {
+        "nw": "^0.12.3",
+        "express": "^4.13.3",
+        "ejs": "^2.3.4",
+        "body-parser": "^1.14.0",
+        "cookie-parser": "~1.0.1"
+    },
+    "devDependencies": {
+        "grunt": "^0.4.5",
+        "grunt-nw-builder": "^2.0.0",
+        "grunt-shell": "^1.1.2"
+    },
+    "window": {
+        "title": "Movie Base",
+        "toolbar": true,
+        "frame": true,
+        "position": "center",
+        "fullscreen": false,
+        "resizable": false,
+        "width": 1000,
+        "height": 600,
+        "min_width": 600,
+        "min_height": 400,
+        "icon": ""
+    }
 }
