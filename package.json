@@ -10,11 +10,16 @@
     "start": "nw"
   },
   "dependencies": {
-    "nw": "^0.12.3",
-    "express": "^4.13.3",
-    "ejs": "^2.3.4",
     "body-parser": "^1.14.0",
-    "cookie-parser": "~1.0.1"
+    "cookie-parser": "~1.0.1",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "kerberos": "0.0.18",
+    "mongodb": "^2.1.4",
+    "mongoose": "latest",
+    "morgan": "latest",
+    "nw": "^0.12.3",
+    "socket.io": "latest"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
