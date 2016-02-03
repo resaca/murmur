@@ -1,0 +1,24 @@
+{
+  "name": "murmur",
+  "version": "1.0.0",
+  "description": "foOfys desktop chat",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/resaca/murmur.git"
+  },
+  "keywords": [
+    "chat",
+    "murmur",
+    "text"
+  ],
+  "author": "Sebin Thomas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/resaca/murmur/issues"
+  },
+  "homepage": "https://github.com/resaca/murmur#readme"
+}
