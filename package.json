@@ -10,14 +10,8 @@
     "start": "nw"
   },
   "dependencies": {
-    "body-parser": "^1.14.0",
-    "cookie-parser": "~1.0.1",
     "ejs": "^2.3.4",
     "express": "^4.13.3",
-    "kerberos": "0.0.18",
-    "mongodb": "^2.1.4",
-    "mongoose": "latest",
-    "morgan": "latest",
     "nw": "^0.12.3",
     "socket.io": "latest"
   },
@@ -27,14 +21,14 @@
     "grunt-shell": "^1.1.2"
   },
   "window": {
-    "title": "Movie Base",
+    "title": "Murmur",
     "toolbar": true,
     "frame": true,
     "position": "center",
     "fullscreen": false,
     "resizable": false,
-    "width": 1000,
-    "height": 600,
+    "width": 400,
+    "height": 700,
     "min_width": 600,
     "min_height": 400,
     "icon": ""

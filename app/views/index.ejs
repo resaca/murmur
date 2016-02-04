@@ -1,48 +1,55 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html ng-app="murmur">
 
 <head>
-    <title>
-        murmur
-    </title>
-    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.css">
+    <title>murmur</title>
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="libs/animate.css/animate.css">
+    <link rel="stylesheet" href="libs/angular-material/angular-material.css">
+
+    <script src="libs/angular/angular.js"></script>
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="libs/angular-animate/angular-animate.js"></script>
+    <script type="text/javascript" src="libs/angular-aria/angular-aria.js"></script>
+    <script type="text/javascript" src="libs/angular-material/angular-material.js"></script>
+    <script type="text/javascript" src="libs/angular-socket-io/socket.js"></script>
+    <script type="text/javascript" src="libs/angular-material-icons/angular-material-icons.js"></script>
+
+    <script src="js/app.js"></script>
 </head>
 
-<body>
+
+<body ng-controller="MainCtrl" ng-init="usernameModal()">
+    <md-content>
+        <section>
+            <md-list>
+                <md-subheader class="md-primary header">Room: {{room}} <span align="right">Userame: {{username}} </span> </md-subheader>
+
+                <md-whiteframe ng-repeat="m in messages" class="md-whiteframe-z2 message" layout layout-align="center center">
+                    <md-list-item class="md-3-line">
+                        <img ng-src="img/user.png" class="md-avatar" alt="User" />
+                        <div class="md-list-item-text">
+                            <h3>{{ m.username }}</h3>
+                            <p>{{m.content}}</p>
+                        </div>
+                    </md-list-item>
+                </md-whiteframe>
+
+            </md-list>
+        </section>
+
+        <div class="footer">
 
 
-    <div ng-include src="'partials/header.html'"></div>
-    <div ng-controller="main" class="container">
-        <div class="col-md-6">
-            <div class="form-group">
-                <input type="text" class="form-control" ng-model="person.name" placeholder="Name">
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control" ng-model="person.age" placeholder="Age">
-            </div>
-            <div class="form-group">
-                <button class="btn btn-primary" ng-click="add()">Add</button>
-            </div>
+            <md-input-container class="full-width">
+                <label>Message</label>
+                <textarea ng-model="message" columns="1" md-maxlength="100" ng-enter="send(message)"></textarea>
+            </md-input-container>
+
+
         </div>
-        <div class="col-md-6">
-            <div class="table-responsive">
-                <table class="table">
-                    <tr>
-                        <th>Name</th>
-                        <th>Age</th>
-                    </tr>
-                    <tr ng-repeat="p in people">
-                        <td>{{p.name}}</td>
-                        <td>{{p.age}}</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-    </div>
-    <script src="libs/jquery/dist/jquery.min.js"></script>
-    <script src="libs/angular/angular.js"></script>
-    <script src="js/app.js"></script>
+
+    </md-content>
 </body>
 
 </html>
