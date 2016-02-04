@@ -1,8 +1,12 @@
 {
-    "name": "murmur",
-    "version": "0.0.0",
-    "dependencies": {
-        "bootstrap": "3.3.5",
-        "angular": "1.4.6"
-    }
+  "name": "murmur",
+  "version": "0.0.0",
+  "dependencies": {
+    "bootstrap": "3.3.5",
+    "angular": "^1.4.9",
+    "angular-material": "^1.0.4",
+    "angular-socket-io": "^0.7.0",
+    "angular-material-icons": "^0.6.0",
+    "animate.css": "^3.5.1"
+  }
 }
